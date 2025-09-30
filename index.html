@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Subredes (JavaScript)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Subredes</h1>
+        <form id="subnetForm">
+            <div class="form-group">
+                <label for="network_address">Dirección de Red (ej: 192.168.1.0/24):</label>
+                <input type="text" id="network_address" name="network_address" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d{1,2}" title="Ingrese una dirección de red en formato CIDR, ej: 192.168.1.0/24">
+            </div>
+            <div class="form-group">
+                <label for="num_subnets">Número de Subredes a generar:</label>
+                <input type="number" id="num_subnets" name="num_subnets" min="2" required>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <!-- El contenedor para los resultados se generará aquí -->
+        <div id="results-container"></div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
